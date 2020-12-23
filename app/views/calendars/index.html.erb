@@ -1,3 +1,4 @@
+
 <div>
   <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'lavel' %>
@@ -15,13 +16,13 @@
           <%= day[:month] %>/<%= day[:date] %><%= day[:wday]%>
         </div>
         <ul class='content'>
+
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
             <li class='plan-list'>・<%= plan %></li>
           <% end %>
         <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
+      </ul>
+    </div>
+  <% end %>
 </div>
